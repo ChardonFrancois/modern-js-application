@@ -1,20 +1,17 @@
-import{displayCharactersCards, openCharacterCard} from './modules/openCard.js'
-import {deleteCharacter} from './modules/delete.js';
+import {
+  displayCharactersCards,
+  openCharacterCard,
+} from "./modules/openCard.js";
+import { createImage, createCharacter } from "./modules/create.js";
+import { editCharacter } from "./modules/editCharacter.js";
+import { deleteCharacter } from "./modules/delete.js";
 
-// const characterId = new Array();
-// let image = "";
-// const cardName = document.getElementsByClassName('name-for-modal');
-// const shortDescription = document.getElementsByClassName('short-for-modal');
-// const longDescription = document.getElementsByClassName('long-for-modal');
-// const cardImage = document.getElementsByClassName('image-for-modal');
-
-
-let callAllFunctions = displayCharactersCards();
+const callAllFunctions = displayCharactersCards();
 
 callAllFunctions.then(() => {
   openCharacterCard();
-//   createImage();
-//   createCharacter();
-//   editCharacter();
+  createImage();
+  createCharacter();
+  editCharacter();
   deleteCharacter();
-})
+});
